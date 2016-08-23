@@ -1,0 +1,6 @@
+[gerrit]
+host=gerrit.phenixp2p.com
+port=29418
+project=iOSSDK
+defaultbranch=master
+defaultrebase=0
