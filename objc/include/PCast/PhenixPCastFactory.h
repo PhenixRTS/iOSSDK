@@ -11,8 +11,10 @@
 
 + (id<PhenixPCast>)createPCast;
 
++ (id<PhenixPCast>)createPCast:(NSString*)uri;
+
 + (id<PhenixPCastAdmin>)createPCastAdmin;
 
-+ (void)initializeDefaultUserMediaOptions:(struct PhenixUserMediaOptions*)options;
++ (id<PhenixPCastAdmin>)createPCastAdmin:(NSString*)uri;
 
 @end

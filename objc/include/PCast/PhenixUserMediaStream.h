@@ -8,7 +8,7 @@
 
 @protocol PhenixUserMediaStream<NSObject>
 
-- (void)applyOptions:(const struct PhenixUserMediaOptions*)options;
+- (void)applyOptions:(const PhenixUserMediaOptions*)options;
 
 @property(readonly, nonatomic, getter=getMediaStream) id<PhenixMediaStream> mediaStream;
 

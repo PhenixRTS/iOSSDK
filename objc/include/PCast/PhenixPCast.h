@@ -11,15 +11,16 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol PhenixPCast <NSObject>
+@protocol PhenixPCast<NSObject>
 
-typedef void (^AuthenticationCallback)(id <PhenixPCast> pcast, PhenixRequestStatus status, NSString* sessionId);
-typedef void (^OnlineCallback)(id <PhenixPCast> pcast);
-typedef void (^OfflineCallback)(id <PhenixPCast> pcast);
-typedef void (^UserMediaCallback)(id <PhenixPCast> pcast, PhenixRequestStatus status, id <PhenixUserMediaStream> userMediaStream);
-typedef void (^PublishCallback)(id <PhenixPCast> pcast, PhenixRequestStatus status, id <PhenixPublisher> publisher);
-typedef void (^SubscribeCallback)(id <PhenixPCast> pcast, PhenixRequestStatus status, id <PhenixMediaStream> mediaStream);
-typedef void (^LogMessageCollectionCallback)(id <PhenixPCast> pcast, PhenixRequestStatus status, NSString* messages);
+typedef void (^AuthenticationCallback)(id<PhenixPCast> pcast, PhenixRequestStatus status, NSString* sessionId);
+typedef void (^OnlineCallback)(id<PhenixPCast> pcast);
+typedef void (^OfflineCallback)(id<PhenixPCast> pcast);
+typedef void (^UserMediaCallback)(
+    id<PhenixPCast> pcast, PhenixRequestStatus status, id<PhenixUserMediaStream> userMediaStream);
+typedef void (^PublishCallback)(id<PhenixPCast> pcast, PhenixRequestStatus status, id<PhenixPublisher> publisher);
+typedef void (^SubscribeCallback)(id<PhenixPCast> pcast, PhenixRequestStatus status, id<PhenixMediaStream> mediaStream);
+typedef void (^LogMessageCollectionCallback)(id<PhenixPCast> pcast, PhenixRequestStatus status, NSString* messages);
 
 // clang-format off
 - (void)initialize:(const struct PhenixPCastInitializeOptions*)options;
@@ -34,7 +35,7 @@ typedef void (^LogMessageCollectionCallback)(id <PhenixPCast> pcast, PhenixReque
 
 - (PhenixRequestStatus)stop;
 
-- (void)getUserMedia:(const struct PhenixUserMediaOptions*)options
+- (void)getUserMedia:(const PhenixUserMediaOptions*)options
                     :(UserMediaCallback)callback;
 
 - (void)publish:(NSString*)streamToken
