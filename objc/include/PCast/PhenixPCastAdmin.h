@@ -1,16 +1,17 @@
 /**
  * Copyright 2016 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
+#import "Common/PhenixRequestStatus.h"
 #import "PCast/PhenixPCast.h"
-#import "PCast/PhenixRequestStatus.h"
 
 #import <Foundation/Foundation.h>
 
-@protocol PhenixPCastAdmin <PhenixPCast>
+@protocol PhenixPCastAdmin<PhenixPCast>
 
-typedef void (^IssueStreamTokenCallback)(id <PhenixPCast> pcast, PhenixRequestStatus status, NSString* streamToken);
-typedef void (^IssueAuthenticationTokenCallback)(id <PhenixPCast> pcast, PhenixRequestStatus status, NSString* authenticationToken);
-typedef void (^ListStreamsCallback)(id <PhenixPCast> pcast, PhenixRequestStatus status, NSArray* streams);
+typedef void (^IssueStreamTokenCallback)(id<PhenixPCast> pcast, PhenixRequestStatus status, NSString* streamToken);
+typedef void (^IssueAuthenticationTokenCallback)(
+    id<PhenixPCast> pcast, PhenixRequestStatus status, NSString* authenticationToken);
+typedef void (^ListStreamsCallback)(id<PhenixPCast> pcast, PhenixRequestStatus status, NSArray* streams);
 
 // clang-format off
 - (PhenixRequestStatus)start:(NSString*) applicationId

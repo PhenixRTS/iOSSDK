@@ -4,6 +4,8 @@
 #import "PCast/PhenixDataQualityReason.h"
 #import "PCast/PhenixDataQualityStatus.h"
 #import "PCast/PhenixDimensions.h"
+#import "PCast/PhenixFrameNotification.h"
+#import "PCast/PhenixMediaStreamTrack.h"
 #import "PCast/PhenixRendererStartStatus.h"
 
 #import <AVFoundation/AVFoundation.h>
@@ -20,7 +22,9 @@ typedef void (^DataReceivedCallback)(id<PhenixRenderer> renderer);
 typedef void (^LastVideoFrameRenderedReceivedCallback)(id<PhenixRenderer> renderer, CVPixelBufferRef nativeVideoFrame);
 typedef void (^VideoDisplayDimensionsChangedCallback)(
     id<PhenixRenderer> renderer, const struct PhenixDimensions* displayDimensions);
+typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> frameNotification);
 
+// clang-format off
 - (void)setRenderSurfaceReadyCallback:(RenderSurfaceReadyCallback)callback;
 
 - (void)setDataQualityChangedCallback:(RendererDataQualityChangedCallback)callback;
@@ -28,6 +32,9 @@ typedef void (^VideoDisplayDimensionsChangedCallback)(
 - (void)setLastVideoFrameRenderedReceivedCallback:(LastVideoFrameRenderedReceivedCallback)callback;
 
 - (void)setVideoDisplayDimensionsChangedCallback:(VideoDisplayDimensionsChangedCallback)callback;
+
+- (void)setFrameReadyCallback:(id<PhenixMediaStreamTrack>)trackToReceiveFramesFrom
+                             :(FrameReadyForProcessingCallback)callback;
 
 - (PhenixRendererStartStatus)start;
 
@@ -38,6 +45,7 @@ typedef void (^VideoDisplayDimensionsChangedCallback)(
 - (void)unmuteAudio;
 
 - (void)requestLastVideoFrameRendered;
+// clang-format on
 
 @property(readonly, nonatomic, getter=isAudioMuted) BOOL audioMuted;
 

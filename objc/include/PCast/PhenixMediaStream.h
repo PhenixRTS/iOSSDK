@@ -18,13 +18,10 @@ typedef void (^StreamEndedCallback)(
 
 - (id<PhenixRenderer>)createRenderer;
 
-// NSArray of id<PhenixMediaStreamTrack>
-- (NSArray*)getAudioTracks;
+- (NSArray<id<PhenixMediaStreamTrack>>*)getAudioTracks;
 
-// NSArray of id<PhenixMediaStreamTrack>
-- (NSArray*)getVideoTracks;
+- (NSArray<id<PhenixMediaStreamTrack>>*)getVideoTracks;
 
-// NSArray of id<PhenixMediaStreamTrack>
-- (NSArray*)getTracks;
+- (NSArray<id<PhenixMediaStreamTrack>>*)getTracks;
 
 @end
