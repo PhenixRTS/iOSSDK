@@ -50,10 +50,16 @@ typedef void (^ListStreamsCallback)(id<PhenixPCast> pcast, PhenixRequestStatus s
 - (void)listStreams:(NSString*)applicationId
                    :(NSString*)secret
                    :(ListStreamsCallback)callback
+                   :(NSArray*)options;
+- (void)listStreams:(NSString*)applicationId
+                   :(NSString*)secret
+                   :(ListStreamsCallback)callback
+                   :(NSArray*)options
                    :(NSString*)startStreamId;
 - (void)listStreams:(NSString*)applicationId
                    :(NSString*)secret
                    :(ListStreamsCallback)callback
+                   :(NSArray*)options
                    :(NSString*)startStreamId
                    :(UInt32)length;
 
