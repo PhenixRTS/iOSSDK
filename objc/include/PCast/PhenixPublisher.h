@@ -1,6 +1,7 @@
 /**
  * Copyright 2016 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
+#import "Common/PhenixDisposable.h"
 #import "PCast/PhenixDataQualityReason.h"
 #import "PCast/PhenixDataQualityStatus.h"
 #import "PCast/PhenixStreamEndedReason.h"
@@ -20,6 +21,8 @@ typedef void (^PublisherDataQualityChangedCallback)(
 - (void)setPublisherEndedCallback:(PublisherEndedCallback)callback;
 
 - (void)setDataQualityChangedCallback:(PublisherDataQualityChangedCallback)callback;
+
+- (id<PhenixDisposable>)limitBandwidth:(UInt64)bandwidthLimitInBps;
 
 @property(readonly, nonatomic, getter=getStreamId) NSString* streamId;
 @property(readonly, nonatomic, getter=hasEnded) BOOL ended;

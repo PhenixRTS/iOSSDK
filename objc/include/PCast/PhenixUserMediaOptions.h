@@ -3,69 +3,19 @@
  */
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, PhenixFacingMode) {
-  // Selects a facing mode automatically
-  PhenixFacingModeAutomatic,
-  // Indicates device does not have facing mode defined
-  PhenixFacingModeUndefined,
-  // Facing user, e.g. front camera
-  PhenixFacingModeUser,
-  // Facing surrounding environment, e.g. back camera
-  PhenixFacingModeEnvironment
-};
+#import "PCast/PhenixDeviceCapability.h"
+#import "PCast/PhenixDeviceConstraint.h"
 
-typedef NS_ENUM(NSInteger, PhenixFlashMode) {
-  PhenixFlashModeAutomatic,
-  PhenixFlashModeAlwaysOn,
-  PhenixFlashModeAlwaysOff
-};
-
-// Microphone polar pattern.
-// Note: Direction of a polar pattern is relative to the orientation of the data source
-typedef NS_ENUM(NSInteger, PhenixPolarPattern) {
-  PhenixPolarPatternAutomatic,
-  // equally sensitive to sound from any direction
-  PhenixPolarPatternOmnidirectional,
-  // most sensitive to sound from the direction in which the data source points and is (nearly) insensitive to sound
-  // from the opposite direction
-  PhenixPolarPatternCardioid,
-  // most sensitive to sound from the direction in which the data source points and is less sensitive to sound from
-  // the opposite direction
-  PhenixPolarPatternSubcardioid
-};
-
-// Indicates roughly where a source (e.g. microphone or camera) is mounted on the device (e.g. iPhone)
-typedef NS_ENUM(NSInteger, PhenixLocation) { PhenixLocationAutomatic, PhenixLocationUpper, PhenixLocationLower };
-
-typedef NS_ENUM(NSInteger, PhenixAudioEchoCancelationMode) {
-  PhenixAudioEchoCancelationModeAutomatic,
-  // AEC is turned on if available
-  PhenixAudioEchoCancelationModeOn,
-  // AEC is off
-  PhenixAudioEchoCancelationModeOff
-};
-
-@interface PhenixUserMediaVideoOptions : NSObject
+@interface PhenixMediaTrackOptions : NSObject
 
 @property(nonatomic) BOOL enabled;
-@property(nonatomic) PhenixFacingMode facingMode;
-@property(nonatomic) PhenixFlashMode flashMode;
-
-@end
-
-@interface PhenixUserMediaAudioOptions : NSObject
-
-@property(nonatomic) BOOL enabled;
-@property(nonatomic) PhenixFacingMode facingMode;
-@property(nonatomic) PhenixLocation preferredMicrophoneLocation;
-@property(nonatomic) PhenixPolarPattern preferredMicrophonePolarPattern;
-@property(nonatomic) PhenixAudioEchoCancelationMode preferredAudioEchoCancelationMode;
+@property(nonatomic, readonly) NSMutableDictionary<NSNumber*, NSArray<PhenixDeviceConstraint*>*>* capabilityConstraints;
 
 @end
 
 @interface PhenixUserMediaOptions : NSObject
 
-@property(nonatomic, readonly) PhenixUserMediaAudioOptions* audio;
-@property(nonatomic, readonly) PhenixUserMediaVideoOptions* video;
+@property(nonatomic, readonly) PhenixMediaTrackOptions* audio;
+@property(nonatomic, readonly) PhenixMediaTrackOptions* video;
 
 @end

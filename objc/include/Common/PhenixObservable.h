@@ -1,7 +1,7 @@
 /**
  * Copyright 2017 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
-#import "Common/PhenixSubscription.h"
+#import "Common/PhenixDisposable.h"
 
 #import <Foundation/Foundation.h>
 
@@ -15,7 +15,7 @@
 
 typedef void (^OnChangedHandler)(PhenixObservableChange<T>* change);
 
-- (id<PhenixSubscription>)subscribe:(OnChangedHandler)onChanged;
+- (id<PhenixDisposable>)subscribe:(OnChangedHandler)onChanged;
 
 - (T)getValue;
 

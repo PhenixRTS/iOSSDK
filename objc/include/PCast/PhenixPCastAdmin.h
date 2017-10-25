@@ -14,11 +14,11 @@ typedef void (^IssueAuthenticationTokenCallback)(
 typedef void (^ListStreamsCallback)(id<PhenixPCast> pcast, PhenixRequestStatus status, NSArray* streams);
 
 // clang-format off
-- (PhenixRequestStatus)start:(NSString*) applicationId
-                            :(NSString*) secret
-                            :(AuthenticationCallback)authenticationCallback
-                            :(OnlineCallback)onlineCallback
-                            :(OfflineCallback)offlineCallback;
+- (void)start:(NSString*)applicationId
+             :(NSString*)secret
+             :(AuthenticationCallback)authenticationCallback
+             :(OnlineCallback)onlineCallback
+             :(OfflineCallback)offlineCallback;
 
 - (void)issueStreamToken:(NSString*)applicationId
                         :(NSString*)secret

@@ -3,6 +3,4 @@
  */
 #import <Foundation/Foundation.h>
 
-@protocol PhenixSubscription<NSObject>
-
-@end
+typedef NS_ENUM(NSInteger, PhenixMediaType) { PhenixMediaTypeAudio, PhenixMediaTypeVideo };
