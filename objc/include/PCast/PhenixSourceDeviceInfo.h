@@ -7,7 +7,7 @@
 #import "PCast/PhenixMediaType.h"
 #import "PCast/PhenixSourceDeviceType.h"
 
-@interface PhenixSourceDeviceInfo : NSObject
+__attribute__((visibility("default"))) @interface PhenixSourceDeviceInfo : NSObject
 
 @property(nonatomic, readonly) NSString* id;
 @property(nonatomic, readonly) NSString* name;

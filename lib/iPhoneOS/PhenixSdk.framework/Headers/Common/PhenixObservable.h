@@ -5,13 +5,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PhenixObservableChange<T> : NSObject
+__attribute__((visibility("default"))) @interface PhenixObservableChange<T> : NSObject
 
 @property (readonly, nonatomic) T value;
 
 @end
 
-@interface PhenixObservable<T> : NSObject
+__attribute__((visibility("default"))) @interface PhenixObservable<T> : NSObject
 
 typedef void (^OnChangedHandler)(PhenixObservableChange<T>* change);
 
