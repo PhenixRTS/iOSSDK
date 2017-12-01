@@ -2,6 +2,7 @@
  * Copyright 2017 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
 #import "PCast/PhenixAudioEchoCancelationMode.h"
+#import "PCast/PhenixAutoFocusMode.h"
 #import "PCast/PhenixFacingMode.h"
 #import "PCast/PhenixFlashMode.h"
 #import "PCast/PhenixLocation.h"
@@ -21,9 +22,9 @@ typedef NS_ENUM(NSInteger, PhenixConstraintType) {
   PhenixConstraintTypeIdeal
 };
 
+// clang-format off
 __attribute__((visibility("default"))) @interface PhenixDeviceConstraint : NSObject
 
-// clang-format off
 + (PhenixDeviceConstraint*)initWithDouble:(double)value
                                          :(PhenixConstraintType)type;
 + (PhenixDeviceConstraint*)initWithDouble:(double)value;
@@ -48,6 +49,9 @@ __attribute__((visibility("default"))) @interface PhenixDeviceConstraint : NSObj
 + (PhenixDeviceConstraint*)initWithVideoSourceRotationMode:(PhenixVideoSourceRotationMode)value
                                                           :(PhenixConstraintType)type;
 + (PhenixDeviceConstraint*)initWithVideoSourceRotationMode:(PhenixVideoSourceRotationMode)value;
++ (PhenixDeviceConstraint*)initWithAutoFocusMode:(PhenixAutoFocusMode)value
+                                                :(PhenixConstraintType)type;
++ (PhenixDeviceConstraint*)initWithAutoFocusMode:(PhenixAutoFocusMode)value;
 // clang-format on
 
 - (void)updateDouble:(double)value;
@@ -58,6 +62,7 @@ __attribute__((visibility("default"))) @interface PhenixDeviceConstraint : NSObj
 - (void)updatePolarPattern:(PhenixPolarPattern)value;
 - (void)updateAudioEchoCancelationMode:(PhenixAudioEchoCancelationMode)value;
 - (void)updateVideoSourceRotationMode:(PhenixVideoSourceRotationMode)value;
+- (void)updateAutoFocusMode:(PhenixAutoFocusMode)value;
 
 @property(readonly, nonatomic) PhenixConstraintType type;
 @property(readonly, nonatomic) NSString* valueAsString;

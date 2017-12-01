@@ -13,5 +13,6 @@ typedef NS_ENUM(NSInteger, PhenixDeviceCapability) {
   PhenixDeviceCapabilityLocation,
   PhenixDeviceCapabilityPolarPattern,
   PhenixDeviceCapabilityAudioEchoCancelationMode,
-  PhenixDeviceCapabilityVideoSourceRotationMode
+  PhenixDeviceCapabilityVideoSourceRotationMode,
+  PhenixDeviceCapabilityAutoFocusMode
 };
