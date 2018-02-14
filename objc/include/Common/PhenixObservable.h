@@ -1,10 +1,11 @@
 /**
  * Copyright 2017 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
-#import "Common/PhenixDisposable.h"
-
 #import <Foundation/Foundation.h>
 
+#import "Common/PhenixDisposable.h"
+
+// clang-format off
 __attribute__((visibility("default"))) @interface PhenixObservableChange<T> : NSObject
 
 @property (readonly, nonatomic) T value;
@@ -22,3 +23,4 @@ typedef void (^OnChangedHandler)(PhenixObservableChange<T>* change);
 - (void)setValue:(T)value;
 
 @end
+    // clang-format on

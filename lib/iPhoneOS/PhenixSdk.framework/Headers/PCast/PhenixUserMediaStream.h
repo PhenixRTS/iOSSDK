@@ -1,12 +1,12 @@
 /**
  * Copyright 2016 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
+#import <Foundation/Foundation.h>
+
 #import "PCast/PhenixFrameNotification.h"
 #import "PCast/PhenixMediaStream.h"
 #import "PCast/PhenixMediaStreamTrack.h"
 #import "PCast/PhenixUserMediaOptions.h"
-
-#import <Foundation/Foundation.h>
 
 @protocol PhenixUserMediaStream<NSObject>
 

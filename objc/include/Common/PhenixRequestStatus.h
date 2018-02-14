@@ -6,6 +6,8 @@
 typedef NS_ENUM(NSInteger, PhenixRequestStatus) {
   // Success
   PhenixRequestStatusOk = 200,
+  // No stream available to subscribe to
+  PhenixRequestStatusNoStreamPlaying = 299,
   // Missing or invalid arguments, reattempt with fixed parameters
   PhenixRequestStatusBadRequest = 400,
   // New token required, do not retry
@@ -25,5 +27,7 @@ typedef NS_ENUM(NSInteger, PhenixRequestStatus) {
   // Capacity error, retry with back-off
   PhenixRequestStatusCapacity = 503,
   // Timeout error, retry once
-  PhenixRequestStatusTimeout = 504
+  PhenixRequestStatusTimeout = 504,
+  // Resource is not ready yet, retry
+  PhenixRequestStatusNotReady = 599
 };

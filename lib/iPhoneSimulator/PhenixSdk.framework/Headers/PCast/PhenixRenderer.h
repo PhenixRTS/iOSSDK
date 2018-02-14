@@ -1,17 +1,17 @@
 /**
  * Copyright 2016 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
+#import <AVFoundation/AVFoundation.h>
+#import <CoreVideo/CoreVideo.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+
 #import "PCast/PhenixDataQualityReason.h"
 #import "PCast/PhenixDataQualityStatus.h"
 #import "PCast/PhenixDimensions.h"
 #import "PCast/PhenixFrameNotification.h"
 #import "PCast/PhenixMediaStreamTrack.h"
 #import "PCast/PhenixRendererStartStatus.h"
-
-#import <AVFoundation/AVFoundation.h>
-#import <CoreVideo/CoreVideo.h>
-#import <Foundation/Foundation.h>
-#import <QuartzCore/QuartzCore.h>
 
 @protocol PhenixRenderer<NSObject>
 
@@ -37,6 +37,8 @@ typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> fram
                              :(FrameReadyForProcessingCallback)callback;
 
 - (PhenixRendererStartStatus)start;
+
+- (PhenixRendererStartStatus)start:(CALayer*)renderLayer;
 
 - (void)stop;
 

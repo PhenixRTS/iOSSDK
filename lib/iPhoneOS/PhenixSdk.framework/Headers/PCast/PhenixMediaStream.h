@@ -1,11 +1,12 @@
 /**
  * Copyright 2016 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
+#import <Foundation/Foundation.h>
+
 #import "PCast/PhenixMediaStreamTrack.h"
 #import "PCast/PhenixRenderer.h"
+#import "PCast/PhenixRendererOptions.h"
 #import "PCast/PhenixStreamEndedReason.h"
-
-#import <Foundation/Foundation.h>
 
 @protocol PhenixMediaStream<NSObject>
 
@@ -17,6 +18,8 @@ typedef void (^StreamEndedCallback)(
 - (void)setStreamEndedCallback:(StreamEndedCallback)callback;
 
 - (id<PhenixRenderer>)createRenderer;
+
+- (id<PhenixRenderer>)createRenderer:(PhenixRendererOptions*)options;
 
 - (NSArray<id<PhenixMediaStreamTrack>>*)getAudioTracks;
 

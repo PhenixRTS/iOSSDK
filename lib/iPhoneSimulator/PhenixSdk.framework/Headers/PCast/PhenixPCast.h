@@ -1,7 +1,8 @@
 /**
  * Copyright 2016 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
-#import "Chat/PhenixRoomChatService.h"
+#import <Foundation/Foundation.h>
+
 #import "Common/PhenixRequestStatus.h"
 #import "PCast/PhenixMediaStream.h"
 #import "PCast/PhenixMediaType.h"
@@ -11,9 +12,6 @@
 #import "PCast/PhenixSourceDeviceInfo.h"
 #import "PCast/PhenixUserMediaOptions.h"
 #import "PCast/PhenixUserMediaStream.h"
-#import "Room/PhenixRoomService.h"
-
-#import <Foundation/Foundation.h>
 
 @protocol PhenixPCast<NSObject>
 
@@ -28,7 +26,7 @@ typedef void (^LogMessageCollectionCallback)(id<PhenixPCast> pcast, PhenixReques
 typedef void (^EnumerateSourceDevicesCallback)(id<PhenixPCast> pcast, NSArray<PhenixSourceDeviceInfo*>* devices);
 
 // clang-format off
-- (void)initialize:(const struct PhenixPCastInitializeOptions*)options;
+- (void)initialize:(PhenixPCastInitializeOptions*)options;
 - (void)initialize;
 
 - (void)shutdown;
@@ -62,11 +60,6 @@ typedef void (^EnumerateSourceDevicesCallback)(id<PhenixPCast> pcast, NSArray<Ph
                  :(SubscribeCallback)callback;
 
 - (void)collectLogMessages:(LogMessageCollectionCallback)callback;
-
-- (id<PhenixRoomService>)getRoomService;
-
-- (id<PhenixRoomChatService>)getRoomChatService:(id<PhenixRoomService>)roomService
-                                               :(NSUInteger)batchSize;
 // clang-format on
 
 @property(readonly, nonatomic, getter=getSessionId) NSString* sessionId;

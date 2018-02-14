@@ -1,6 +1,8 @@
 /**
  * Copyright 2017 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
  */
+#import <Foundation/Foundation.h>
+
 #import "PCast/PhenixAudioEchoCancelationMode.h"
 #import "PCast/PhenixAutoFocusMode.h"
 #import "PCast/PhenixFacingMode.h"
@@ -8,8 +10,6 @@
 #import "PCast/PhenixLocation.h"
 #import "PCast/PhenixPolarPattern.h"
 #import "PCast/PhenixVideoSourceRotationMode.h"
-
-#import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, PhenixConstraintType) {
   // Hard constraint: Capability must have at least the specified value

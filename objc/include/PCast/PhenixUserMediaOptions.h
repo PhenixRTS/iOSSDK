@@ -6,6 +6,7 @@
 #import "PCast/PhenixDeviceCapability.h"
 #import "PCast/PhenixDeviceConstraint.h"
 
+// clang-format off
 __attribute__((visibility("default"))) @interface PhenixMediaTrackOptions : NSObject
 
 @property(nonatomic) BOOL enabled;
@@ -19,3 +20,4 @@ __attribute__((visibility("default"))) @interface PhenixUserMediaOptions : NSObj
 @property(nonatomic, readonly) PhenixMediaTrackOptions* video;
 
 @end
+    // clang-format on
