@@ -5,6 +5,7 @@
 #import "Common/PhenixRequestStatus.h"
 #import "Room/PhenixMember.h"
 #import "Room/PhenixRoom.h"
+#import "Room/PhenixRoomOptions.h"
 #import "Room/PhenixRoomType.h"
 #import "Room/PhenixStream.h"
 
@@ -27,9 +28,7 @@ typedef void (^DestroyRoomCallback)(id<PhenixRoomService> roomService, PhenixReq
                    :(NSString*)alias
                    :(GetRoomInfoCallback)callback;
 
-- (void)createRoom:(NSString*)name
-                  :(PhenixRoomType)type
-                  :(NSString*)description
+- (void)createRoom:(id<PhenixRoomOptions>)options
                   :(CreateRoomCallback)callback;
 
 - (void)joinRoom:(NSString*)roomId

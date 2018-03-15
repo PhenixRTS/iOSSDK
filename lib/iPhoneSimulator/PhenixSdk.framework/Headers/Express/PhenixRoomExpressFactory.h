@@ -6,6 +6,7 @@
 #import "Express/PhenixJoinChannelOptionsBuilder.h"
 #import "Express/PhenixJoinRoomOptionsBuilder.h"
 #import "Express/PhenixPCastExpress.h"
+#import "Express/PhenixPublishToRoomOptionsBuilder.h"
 #import "Express/PhenixRoomExpress.h"
 #import "Express/PhenixRoomExpressOptionsBuilder.h"
 
@@ -23,6 +24,8 @@ __attribute__((visibility("default"))) @interface PhenixRoomExpressFactory : NSO
 + (id<PhenixJoinChannelOptionsBuilder>)createJoinChannelOptionsBuilder;
 
 + (id<PhenixJoinRoomOptionsBuilder>)createJoinRoomOptionsBuilder;
+
++ (id<PhenixPublishToRoomOptionsBuilder>)createPublishToRoomOptionsBuilder;
 // clang-format on
 
 @end

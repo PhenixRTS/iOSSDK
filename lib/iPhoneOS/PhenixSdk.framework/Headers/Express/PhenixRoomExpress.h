@@ -7,13 +7,17 @@
 #import "Express/PhenixJoinChannelOptions.h"
 #import "Express/PhenixJoinRoomOptions.h"
 #import "Express/PhenixPCastExpress.h"
+#import "Express/PhenixPublishToRoomOptions.h"
 #import "Room/PhenixMember.h"
+#import "Room/PhenixRoom.h"
+#import "Room/PhenixRoomOptions.h"
 #import "Room/PhenixRoomService.h"
 
 @protocol PhenixRoomExpress<NSObject>
 
 typedef void (^PhenixRoomExpressJoinRoomCallback)(PhenixRequestStatus status, id<PhenixRoomService> roomService);
 typedef void (^PhenixRoomExpressMembersChangedCallback)(NSArray<id<PhenixMember>>* roomMembers);
+typedef void (^PhenixRoomExpressCreateRoomCallback)(PhenixRequestStatus status, id<PhenixRoom> immutableRoom);
 typedef void (^PhenixRoomExpressJoinChannelCallback)(PhenixRequestStatus status, id<PhenixRoomService> roomService);
 
 // clang-format off
@@ -22,6 +26,14 @@ typedef void (^PhenixRoomExpressJoinChannelCallback)(PhenixRequestStatus status,
                 :(PhenixRoomExpressMembersChangedCallback)membersChangedCallback;
 - (void)joinRoom:(id<PhenixJoinRoomOptions>)options
                 :(PhenixRoomExpressJoinRoomCallback)joinRoomCallback;
+
+- (void)createRoom:(id<PhenixRoomOptions>)options
+                  :(PhenixRoomExpressCreateRoomCallback)createRoomCallback;
+
+- (void)publishToRoom:(id<PhenixPublishToRoomOptions>)options
+                     :(PhenixPCastExpressPublishCallback)publisherCallback;
+- (void)publishToRoomWithPreview:(id<PhenixPublishToRoomOptions>)options
+                                :(PhenixPCastExpressPublishWithPreviewCallback)publisherCallback;
 
 - (void)joinChannel:(id<PhenixJoinChannelOptions>)options
                    :(PhenixRoomExpressJoinChannelCallback)joinChannelCallback
