@@ -1,14 +1,14 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
+ * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
-#import "Express/PhenixJoinChannelOptionsBuilder.h"
 #import "Express/PhenixJoinRoomOptionsBuilder.h"
 #import "Express/PhenixPCastExpress.h"
 #import "Express/PhenixPublishToRoomOptionsBuilder.h"
 #import "Express/PhenixRoomExpress.h"
 #import "Express/PhenixRoomExpressOptionsBuilder.h"
+#import "Express/PhenixSubscribeToMemberStreamOptionsBuilder.h"
 
 // clang-format off
 __attribute__((visibility("default"))) @interface PhenixRoomExpressFactory : NSObject
@@ -21,11 +21,11 @@ __attribute__((visibility("default"))) @interface PhenixRoomExpressFactory : NSO
 
 + (id<PhenixRoomExpressOptionsBuilder>)createRoomExpressOptionsBuilder;
 
-+ (id<PhenixJoinChannelOptionsBuilder>)createJoinChannelOptionsBuilder;
-
 + (id<PhenixJoinRoomOptionsBuilder>)createJoinRoomOptionsBuilder;
 
 + (id<PhenixPublishToRoomOptionsBuilder>)createPublishToRoomOptionsBuilder;
+
++ (id<PhenixSubscribeToMemberStreamOptionsBuilder>)createSubscribeToMemberStreamOptionsBuilder;
 // clang-format on
 
 @end

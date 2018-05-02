@@ -1,33 +1,16 @@
 /**
- * Copyright 2017 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
+ * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
  */
-#import "Common/PhenixRequestStatus.h"
-#import "Room/PhenixMember.h"
-#import "Room/PhenixRoomType.h"
-
 #import <Foundation/Foundation.h>
 
-@protocol PhenixRoom<NSObject>
+#import "Common/PhenixRequestStatus.h"
+#import "Room/PhenixImmutableRoom.h"
 
-typedef void (^RoomCommitCallback)(PhenixRequestStatus status, NSString* message);
+@protocol PhenixRoom<PhenixImmutableRoom>
 
-- (NSString*)getRoomId;
+typedef void (^PhenixRoomCommitCallback)(PhenixRequestStatus status, NSString* message);
 
-- (PhenixObservable<NSString*>*)getObservableAlias;
-
-- (PhenixObservable<NSString*>*)getObservableName;
-
-- (PhenixObservable<NSString*>*)getObservableDescription;
-
-- (PhenixObservable<NSNumber*>*)getObservableType;
-
-- (PhenixObservable<NSArray<id<PhenixMember>>*>*)getObservableMembers;
-
-- (PhenixObservable<NSString*>*)getObservableBridgeId;
-
-- (PhenixObservable<NSString*>*)getObservablPin;
-
-- (void)commitChanges:(RoomCommitCallback)callback;
+- (void)commitChanges:(PhenixRoomCommitCallback)callback;
 
 - (void)reload;
 

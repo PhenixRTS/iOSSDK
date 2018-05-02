@@ -1,5 +1,5 @@
 /**
- * Copyright 2017 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
+ * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import "Common/PhenixObservable.h"
 #import "Room/PhenixStreamType.h"

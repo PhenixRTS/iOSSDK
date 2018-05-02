@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
+ * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
@@ -10,6 +10,8 @@
 
 // clang-format off
 - (id<PhenixRoomOptionsBuilder>)withName:(NSString*)name;
+
+- (id<PhenixRoomOptionsBuilder>)withAlias:(NSString*)alias;
 
 - (id<PhenixRoomOptionsBuilder>)withDescription:(NSString*)description;
 

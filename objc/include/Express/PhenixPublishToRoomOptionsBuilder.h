@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All rights reserved.
+ * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
@@ -19,6 +19,8 @@
 - (id<PhenixPublishToRoomOptionsBuilder>)withMemberRole:(PhenixMemberRole)memberRole;
 
 - (id<PhenixPublishToRoomOptionsBuilder>)withStreamType:(PhenixStreamType)streamType;
+
+- (id<PhenixPublishToRoomOptionsBuilder>)withScreenName:(NSString*)screenName;
 
 - (id<PhenixPublishToRoomOptionsBuilder>)withViewerStreamSelectionStrategy:(PhenixStreamSelectionStrategy)strategy;
 
