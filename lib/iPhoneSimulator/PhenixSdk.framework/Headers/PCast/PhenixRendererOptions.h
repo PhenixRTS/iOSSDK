@@ -11,5 +11,9 @@ __attribute__((visibility("default"))) @interface PhenixRendererOptions : NSObje
 
 @property(nonatomic) PhenixAspectRatioMode aspectRatioMode;
 
+@property(nonatomic) BOOL useNullVideoDevice;
+
+@property(nonatomic) BOOL useNullAudioDevice;
+
 @end
     // clang-format on
