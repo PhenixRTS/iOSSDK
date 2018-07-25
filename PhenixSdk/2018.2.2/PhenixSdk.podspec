@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = "lib/iPhoneOS/PhenixSdk.framework"
   s.source_files        = "lib/iPhoneOS/PhenixSdk.framework/Headers/**/*.h"
   s.public_header_files = "lib/iPhoneOS/PhenixSdk.framework/Headers/**/*.h"
+  s.preserve_paths      = "lib/iPhoneOS/PhenixSdk.framework"
   s.platform            = :ios, '9.0'
   s.requires_arc        = true
   s.frameworks          = 'UIKit'
