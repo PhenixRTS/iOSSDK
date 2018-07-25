@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage            = "https://phenixrts.com"
   s.license             = ''
   s.author              = { "Phenix" => "info@phenixrts.com" }
-  s.source              = { :git => "ssh://git@github.com/PhenixRTS/iOSSDK.git", :tag => 'v2018.2.2' }
+  s.source              = { :git => "ssh://git@github.com/PhenixRTS/iOSSDK.git", :tag => "v#{s.version}" }
   s.vendored_frameworks = "lib/iPhoneOS/PhenixSdk.framework"
   s.source_files        = "lib/iPhoneOS/PhenixSdk.framework/Headers/**/*.h"
   s.public_header_files = "lib/iPhoneOS/PhenixSdk.framework/Headers/**/*.h"
