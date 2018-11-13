@@ -10,5 +10,6 @@ typedef NS_ENUM(NSInteger, PhenixStreamEndedReason) {
   PhenixStreamEndedReasonMaintenance,
   PhenixStreamEndedReasonCapacity,
   PhenixStreamEndedReasonAppBackground,
-  PhenixStreamEndedReasonCustom
+  PhenixStreamEndedReasonCustom,
+  PhenixStreamEndedReasonOverload
 };
