@@ -24,6 +24,8 @@
 
 - (id<PhenixPublishRemoteOptionsBuilder>)withStreamToken:(NSString*)streamToken;
 
+- (id<PhenixPublishRemoteOptionsBuilder>)withDetachedPublisher;
+
 - (id<PhenixPublishRemoteOptions>)buildPublishRemoteOptions;
 // clang-format on
 

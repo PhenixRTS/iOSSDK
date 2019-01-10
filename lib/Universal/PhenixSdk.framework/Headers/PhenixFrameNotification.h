@@ -4,11 +4,18 @@
 #import <CoreMedia/CoreMedia.h>
 #import <Foundation/Foundation.h>
 
+#import "PhenixMediaFormat.h"
+
 @protocol PhenixFrameNotification<NSObject>
 
 typedef void (^ReadFrameCallback)(CMSampleBufferRef frame);
 
 - (void)read:(ReadFrameCallback)callback;
+
+// clang-format off
+- (void)readWithFormat:(PhenixMediaFormat)desiredFormat
+                      :(ReadFrameCallback)callback;
+// clang-format on
 
 - (void)write:(CMSampleBufferRef)newFrame;
 

@@ -18,7 +18,11 @@ typedef void (^OnChangedHandler)(PhenixObservableChange<T>* change);
 
 - (id<PhenixDisposable>)subscribe:(OnChangedHandler)onChanged;
 
+- (BOOL)hasValue;
+
 - (T)getValue;
+
+- (T)getValueOrDefault;
 
 - (void)setValue:(T)value;
 
