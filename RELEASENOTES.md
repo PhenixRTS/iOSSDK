@@ -1,5 +1,13 @@
 # Release notes
 
+### 2019.0.0 ###
+#### Fixes
+- Publisher bitrate limitation reason will remain “None” and no longer be set to “PublisherLimited” while recovering from bitrate override
+- Normal app termination/exit will no longer trigger sporadic exceptions
+- Audio volume will no longer decrease low for viewers that had become publishers temporarily
+- Connected BlueTooth devices will now be sent audio when just rendering a local preview
+
+
 ### 2018.4.3 ###
 #### Features/Improvements
 - URIs passed to SDK can now accept leading and trailing whitespaces without causing failures
