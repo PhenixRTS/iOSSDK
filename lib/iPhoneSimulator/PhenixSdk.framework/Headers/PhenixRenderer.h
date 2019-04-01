@@ -12,6 +12,7 @@
 #import "PhenixFrameNotification.h"
 #import "PhenixMediaStreamTrack.h"
 #import "PhenixRendererStartStatus.h"
+#import "PhenixRendererStatistics.h"
 
 @protocol PhenixRenderer<NSObject>
 
@@ -52,5 +53,7 @@ typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> fram
 @property(readonly, nonatomic, getter=isAudioMuted) BOOL audioMuted;
 
 @property(readonly, nonatomic) struct PhenixDimensions videoDisplayDimensions;
+
+@property(readonly, nonatomic) struct PhenixRendererStatistics stats;
 
 @end

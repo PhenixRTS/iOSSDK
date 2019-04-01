@@ -1,5 +1,13 @@
 # Release notes
 
+### 2019.2.0 ###
+#### Fixes
+- Fix crash during ICE server registration
+- Safe creation of an empty renderer from an already stopped ExpressSubscriber
+- Publisher side frame-ready API: Drops frames when overloaded instead of falling behind
+- Fix prefer-h264 publish capability for old iPads (e.g. mini 2)
+
+
 ### 2019.0.0 ###
 #### Fixes
 - Publisher bitrate limitation reason will remain “None” and no longer be set to “PublisherLimited” while recovering from bitrate override
