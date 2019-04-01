@@ -5,6 +5,7 @@
 
 #import "PhenixExpressPublisher.h"
 #import "PhenixExpressSubscriber.h"
+#import "PhenixObservable.h"
 #import "PhenixPCast.h"
 #import "PhenixPublishOptions.h"
 #import "PhenixPublishRemoteOptions.h"
@@ -41,6 +42,8 @@ typedef void (^PhenixPCastExpressWaitForOnlineCallback)();
                  :(PhenixPCastExpressSubscribeCallback)callback;
 
 - (void)waitForOnline:(PhenixPCastExpressWaitForOnlineCallback)callback;
+
+- (PhenixObservable<NSNumber*>*)getObservableIsOnlineStatus;
 // clang-format on
 
 @property(readonly, nonatomic) id<PhenixPCast> pcast;

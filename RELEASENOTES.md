@@ -1,5 +1,17 @@
 # Release notes
 
+### 2019.2.0 ###
+#### Features/Improvements
+- `getObservableIsOnlineStatus` API on `PhenixPCastExpress`: Boolean observable value indicating whether or not we are currently connected to the Phenix platform
+- `stats` property on `PhenixRenderer`: Will provide real-time statistics similar to https://phenixrts.com/docs/web/low-level/#object-rendererstats eventually. Current versions always returns 0 for `lag`.
+#### Fixes
+- Fix crash during ICE server registration
+- Safe creation of an empty renderer from an already stopped ExpressSubscriber
+- Publisher side frame-ready API: Drops frames when overloaded instead of falling behind
+- Fix prefer-h264 publish capability for old iPads (e.g. mini 2)
+
+
+
 ### 2019.0.0 ###
 #### Fixes
 - Publisher bitrate limitation reason will remain “None” and no longer be set to “PublisherLimited” while recovering from bitrate override
