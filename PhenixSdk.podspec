@@ -1,16 +1,20 @@
 Pod::Spec.new do |spec|
 
-  # before editing, check spec.source definition
-  spec.version      = "2019.2.0"
+  spec.version      = "2019.2.0" # keep in mind "spec.source" syntax.
 
   spec.name         = "PhenixSdk"
-  spec.summary      = "Video Realtime solutions"
   spec.homepage     = "http://phenixrts.com/"
-  spec.license      = "Proprietary"
-  spec.author       = "Phenix Real Time Solutions Inc."
-  spec.platform     = :ios, "9.0"
+  spec.summary      = "Video Real Time solutions"
+  spec.license      = { :type => "Proprietary", :text => <<-LICENSE
+                          Copyright 2019 Phenix Real Time Solutions, Inc. 
+                          Confidential and Proprietary. All rights reserved.
+                        LICENSE
+                      }
+  spec.author       = "Phenix Real Time Solutions, Inc."
+  
   spec.source       = { :git => "git@github.com:PhenixRTS/iOSSDK.git", :tag => "v#{spec.version}" }
   spec.ios.vendored_framework  = "lib/Universal/PhenixSdk.framework"
 
-  spec.xcconfig = { "ENABLE_BITCODE" => "NO" }
+  spec.platform     = :ios, "9.0"
+  spec.xcconfig     = { "ENABLE_BITCODE" => "NO" }
 end
