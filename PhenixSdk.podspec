@@ -3,8 +3,8 @@ Pod::Spec.new do |spec|
   spec.version      = "2019.2.0" # keep in mind "spec.source" syntax.
 
   spec.name         = "PhenixSdk"
-  spec.homepage     = "http://phenixrts.com/"
-  spec.summary      = "Video Real Time solutions"
+  spec.homepage     = "https://phenixrts.com/"
+  spec.summary      = "Video Real Time Solutions"
   spec.license      = { :type => "Proprietary", :text => <<-LICENSE
                           Copyright 2019 Phenix Real Time Solutions, Inc. 
                           Confidential and Proprietary. All rights reserved.
