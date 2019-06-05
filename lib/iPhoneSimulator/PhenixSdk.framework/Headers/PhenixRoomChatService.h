@@ -17,10 +17,10 @@ typedef void (^SendMessageCallback)(PhenixRequestStatus status, NSString* messag
 
 - (PhenixObservable<NSArray<id<PhenixChatMessage>>*>*)getObservableChatMessages;
 
-- (void)SendMessageToRoom:(NSString*)message;
+- (void)sendMessageToRoom:(NSString*)message;
 
 // clang-format off
-- (void)SendMessageToRoom:(NSString*)message
+- (void)sendMessageToRoom:(NSString*)message
                          :(SendMessageCallback)callback;
 
 - (void)getMessages:(UInt32)batchSize
