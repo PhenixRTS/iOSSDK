@@ -12,6 +12,7 @@
 - Fixed rebuffering telemetry metric
 - Fixed rare crash when backgrounding app
 - Fixed crash when attempting to subscribe while SDK is being shut down
+- Fixed spelling for `PhenixRoomChatService.sendMessageToRoom` API (previously `SendMessageToRoom`)
 
 
 ### 2019.2.0 ###
