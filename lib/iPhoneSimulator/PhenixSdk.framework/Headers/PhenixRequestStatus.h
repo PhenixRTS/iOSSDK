@@ -20,6 +20,8 @@ typedef NS_ENUM(NSInteger, PhenixRequestStatus) {
   PhenixRequestStatusNotInitialized = 412,
   // PCast not started, do not retry
   PhenixRequestStatusNotStarted = 417,
+  // Request was rejected due to current load, retry with back-off
+  PhenixRequestStatusRateLimited = 429,
   // Upgrade is required, do not retry
   PhenixRequestStatusUpgradeRequired = 499,
   // General error, retry once
