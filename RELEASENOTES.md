@@ -1,5 +1,19 @@
 # Release notes
 
+### 2019.2.1 ###
+#### Features/Improvements
+- Lag render statistic via `Renderer.getStats`/`PhenixRenderer.stats`
+- Reduced SDK initialization times
+- Improved layer switching strategy for MBR streams
+- Improved reconnection logic for clients with network outages
+- Automatic channel viewer stream restart when app returns to foreground
+#### Fixes
+- Fixed memory leak on stop publishing
+- Fixed rebuffering telemetry metric
+- Fixed rare crash when backgrounding app
+- Fixed crash when attempting to subscribe while SDK is being shut down
+
+
 ### 2019.2.0 ###
 #### Features/Improvements
 - `getObservableIsOnlineStatus` API on `PhenixPCastExpress`: Boolean observable value indicating whether or not we are currently connected to the Phenix platform
@@ -9,7 +23,6 @@
 - Safe creation of an empty renderer from an already stopped ExpressSubscriber
 - Publisher side frame-ready API: Drops frames when overloaded instead of falling behind
 - Fix prefer-h264 publish capability for old iPads (e.g. mini 2)
-
 
 
 ### 2019.0.0 ###
