@@ -47,3 +47,13 @@ Value: `Debug`
 To reduce output, you can change the value to `Info` or `Warn` for instance. You will only be able to view these logs when either running in the simulator or with a device attached to Xcode.
 
 You can also retrieve the Phenix SDK logs programmatically using the `collectLogMessages` PCast API.
+
+## See Also
+### Related Examples
+* [Mobile Examples](https://github.com/PhenixRTS/MobileExamples)
+* [Web Examples](https://github.com/PhenixRTS/WebExamples)
+### Documentation
+* [Channel Viewer Tutorial](https://phenixrts.com/docs/ios/#view-a-channel)
+* [Phenix Channel Express](https://phenixrts.com/docs/ios/#channel-express)
+* [Phenix Low Level API](https://phenixrts.com/docs/ios/low-level/)
+* [Phenix Platform Documentation](http://phenixrts.com/docs/)
