@@ -1,5 +1,49 @@
 # Phenix iOS SDK
+The Phenix SDK is provided as a standard iOS [Framework](https://developer.apple.com/library/archive/technotes/tn2435/_index.html).
+Please make sure you have installed [GitLFS](https://git-lfs.github.com/).
+## Integration
+### With Cocoapod (recommended)
+You can use our library with [Cocoapod](https://cocoapods.org/) dependency manager.
+`Podfile` Example:
+```
+source 'https://github.com/CocoaPods/Specs.git' # Default global repository
+source 'git@github.com:PhenixRTS/CocoaPodsSpecs.git' # Phenix private repository
 
-The Phenix iOS SDK provides APIs that enable iOS devices to stream from and to Phenix PCast.
+target 'your app name'
+  use_frameworks!
+  pod 'PhenixSdk', '~> 2019.2.0'
+```
 
-The SDK utilizes the iOS SDK and provices high level APIs to publish and view streams.
+### As Framework
+The Phenix SDK framework is structured as follows:
+* `<SDK root>/lib/iPhoneOS/PhenixSdk.framework`: This contains the following architectures for physical devices: **arm64, armv7, and armv7s**
+* `<SDK root>/lib/iPhoneSimulator/PhenixSdk.framework`: This contains the following simulator architecture: x64
+* `<SDK root>/lib/Universal/PhenixSdk.framework`: This contains all architectures for simulator and physical devices
+
+Notes:
+* In order to remain compliant with Apple's App Store policies, you cannot include simulator architectures in the app or any dependent frameworks you are deploying. For now, please either use the `iPhoneOS` version of the SDK, or ensure that non-device architectures are stripped out before attempting to deploy your app.
+* When deploying your app in the App Store, Apple will employ a process called App Thinning, which ensures that your users will only download the architecture relevant for their device. All other architectures will be stripped automatically (see [Apple App Thinning](https://help.apple.com/xcode/mac/current/#/devbbdc5ce4f)).
+* **The Minium Deployment Target is iOS 9.0**. Combined with the supported architectures listed above, this means that the Phenix SDK can run on iOS devices as old as the iPhone4S or iPod Touch 5th Gen.
+
+To integrate the Phenix SDK framework into your Xcode project, follow these steps:
+
+1. Add the framework in the `General` section of your Xcode project
+2. Open the `Embedded Binaries` section within the General page, click + and add the Phenix SDK framework. Select “Copy items if needed” if you want, this will copy the framework into your project’s folder (but it is optional).
+3. If you are not copying the framework in step 2, you also have to update the `Framework Search Paths` (under *Build Settings* -> *Packaging*) to `<your Phenix SDK location>/lib/Universal` (or instead of `Universal`, use `iPhoneOS` or `iPhoneSimulator`)
+4. Verify that the following property is set: `Runpath Search Paths` should be `@executable_path/Frameworks` (under *Build Settings* -> *Linking*)
+5. **Objective-C only**: Set `Enable Modules (C and Objective-C)` to `Yes` (under *Build Settings* -> *Apple Clang - Language - Modules*)
+6. Import the PhenixSdk module as follows in your source files that need to interact with the Phenix SDK:
+  * `@import PhenixSdk;` (Objective-C)
+  * `import PhenixSdk` (Swift)
+
+If you were previously using the static Phenix SDK library, make sure you first remove all references to the static lib and other frameworks not needed by your app. You can also delete all compiler and linker flags that you do not need yourself.
+
+## Debugging
+In order to identify issues it can be helpful to see what is happening at the Phenix SDK level. Phenix logs are disabled by default in the Xcode console. To enable them, set the following environment variable (via Xcode menu: Product -> Scheme -> Edit Scheme... -> Run -> Arguments -> Environment Variables):
+
+Name: `PHENIX_LOGGING_CONSOLE_LOG_LEVEL`
+Value: `Debug`
+
+To reduce output, you can change the value to `Info` or `Warn` for instance. You will only be able to view these logs when either running in the simulator or with a device attached to Xcode.
+
+You can also retrieve the Phenix SDK logs programmatically using the `collectLogMessages` PCast API.
