@@ -12,10 +12,9 @@ source 'git@github.com:PhenixRTS/CocoaPodsSpecs.git' # Phenix private repository
 target 'your app name'
   use_frameworks!
   pod 'PhenixSdk'
-  # pod 'PhenixSdk', '~> 2019.2.0'
 ```
 
-### As Framework
+### As independent Framework
 The Phenix SDK framework is structured as follows:
 * `<SDK root>/lib/iPhoneOS/PhenixSdk.framework`: This contains the following architectures for physical devices: **arm64, armv7, and armv7s**
 * `<SDK root>/lib/iPhoneSimulator/PhenixSdk.framework`: This contains the following simulator architecture: x64
