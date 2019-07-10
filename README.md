@@ -11,7 +11,8 @@ source 'git@github.com:PhenixRTS/CocoaPodsSpecs.git' # Phenix private repository
 
 target 'your app name'
   use_frameworks!
-  pod 'PhenixSdk', '~> 2019.2.0'
+  pod 'PhenixSdk'
+  # pod 'PhenixSdk', '~> 2019.2.0'
 ```
 
 ### As Framework
@@ -39,14 +40,7 @@ To integrate the Phenix SDK framework into your Xcode project, follow these step
 If you were previously using the static Phenix SDK library, make sure you first remove all references to the static lib and other frameworks not needed by your app. You can also delete all compiler and linker flags that you do not need yourself.
 
 ## Debugging
-In order to identify issues it can be helpful to see what is happening at the Phenix SDK level. Phenix logs are disabled by default in the Xcode console. To enable them, set the following environment variable (via Xcode menu: Product -> Scheme -> Edit Scheme... -> Run -> Arguments -> Environment Variables):
-
-Name: `PHENIX_LOGGING_CONSOLE_LOG_LEVEL`
-Value: `Debug`
-
-To reduce output, you can change the value to `Info` or `Warn` for instance. You will only be able to view these logs when either running in the simulator or with a device attached to Xcode.
-
-You can also retrieve the Phenix SDK logs programmatically using the `collectLogMessages` PCast API.
+Please check our [documentation](https://phenixrts.com/docs/ios/?swift#debugging).
 
 ## See Also
 ### Related Examples
