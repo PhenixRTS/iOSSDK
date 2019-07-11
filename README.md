@@ -21,7 +21,7 @@ The Phenix SDK framework is structured as follows:
 * `<SDK root>/lib/Universal/PhenixSdk.framework`: This contains all architectures for simulator and physical devices
 
 Notes:
-* In order to remain compliant with Apple's App Store policies, you cannot include simulator architectures in the app or any dependent frameworks you are deploying. For now, please either use the `iPhoneOS` version of the SDK, or ensure that non-device architectures are stripped out before attempting to deploy your app.
+* In order to comply with Apple's App Store policies, simulator architectures need to be excluded from app builds uploaded to appstore. For now, please either use the `iPhoneOS` version of the SDK, or ensure that non-device architectures are stripped out before attempting to deploy your app.
 * When deploying your app in the App Store, Apple will employ a process called App Thinning, which ensures that your users will only download the architecture relevant for their device. All other architectures will be stripped automatically (see [Apple App Thinning](https://help.apple.com/xcode/mac/current/#/devbbdc5ce4f)).
 * **The Minimum Deployment Target is iOS 9.0**. Combined with the supported architectures listed above, this means that the Phenix SDK can run on iOS devices as old as the iPhone4S or iPod Touch 5th Gen.
 
