@@ -2,6 +2,16 @@
 
 ### 2019.2.1 ###
 #### Features/Improvements
+- Support for iOS 13
+- Added option to force VPIO Audio Unit to be used regardless of Audio Echo Cancellation setting, which allows the volume to be kept consistent when a stream subscriber starts to publish
+#### Fixes
+- Room participants will no longer leave zombie sessions around when reauthenticating
+- Fixed `audio-only` for cases where wildcard tokens are present for channel viewers
+- Fixed color artifacts when rendering H264 video in certain resolutions
+
+
+### 2019.2.1 ###
+#### Features/Improvements
 - Lag render statistic via `Renderer.getStats`/`PhenixRenderer.stats`
 - Reduced SDK initialization times
 - Improved layer switching strategy for MBR streams
