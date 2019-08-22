@@ -1,6 +1,6 @@
 # Release notes
 
-### 2019.2.1 ###
+### 2019.2.2 ###
 #### Features/Improvements
 - Support for iOS 13
 - Added option to force VPIO Audio Unit to be used regardless of Audio Echo Cancellation setting, which allows the volume to be kept consistent when a stream subscriber starts to publish
