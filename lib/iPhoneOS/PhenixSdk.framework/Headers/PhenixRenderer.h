@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
+ * Copyright 2019 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <AVFoundation/AVFoundation.h>
 #import <CoreVideo/CoreVideo.h>
@@ -9,8 +9,10 @@
 #import "PhenixDataQualityReason.h"
 #import "PhenixDataQualityStatus.h"
 #import "PhenixDimensions.h"
+#import "PhenixDuration.h"
 #import "PhenixFrameNotification.h"
 #import "PhenixMediaStreamTrack.h"
+#import "PhenixObservable.h"
 #import "PhenixRendererStartStatus.h"
 #import "PhenixRendererStatistics.h"
 
@@ -48,6 +50,10 @@ typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> fram
 - (void)unmuteAudio;
 
 - (void)requestLastVideoFrameRendered;
+
+- (PhenixObservable<PhenixDuration*>*)getObservablePlayoutDelay;
+
+- (id<PhenixDisposable>)overridePlayoutDelay:(NSTimeInterval)desiredPlayoutDelay;
 // clang-format on
 
 @property(readonly, nonatomic, getter=isAudioMuted) BOOL audioMuted;
