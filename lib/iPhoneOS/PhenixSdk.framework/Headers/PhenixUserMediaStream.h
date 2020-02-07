@@ -6,6 +6,7 @@
 #import "PhenixFrameNotification.h"
 #import "PhenixMediaStream.h"
 #import "PhenixMediaStreamTrack.h"
+#import "PhenixRequestStatus.h"
 #import "PhenixUserMediaOptions.h"
 
 @protocol PhenixUserMediaStream<NSObject>
@@ -13,7 +14,7 @@
 typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> frameNotification);
 
 // clang-format off
-- (void)applyOptions:(const PhenixUserMediaOptions*)options;
+- (PhenixRequestStatus)applyOptions:(const PhenixUserMediaOptions*)options;
 
 - (void)setFrameReadyCallback:(id<PhenixMediaStreamTrack>)trackToReceiveFramesFrom
                              :(FrameReadyForProcessingCallback)callback;

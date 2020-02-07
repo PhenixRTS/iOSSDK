@@ -1,9 +1,11 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
+ * Copyright 2019 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
+#import "PhenixMediaStreamEndedInfo.h"
 #import "PhenixMediaStreamTrack.h"
+#import "PhenixObservable.h"
 #import "PhenixRenderer.h"
 #import "PhenixRendererOptions.h"
 #import "PhenixStreamEndedReason.h"
@@ -15,7 +17,8 @@ typedef void (^StreamEndedCallback)(
 
 - (void)stop;
 
-- (void)setStreamEndedCallback:(StreamEndedCallback)callback;
+- (void)setStreamEndedCallback:(StreamEndedCallback)callback
+    __attribute((deprecated("Use getObservableEndedInfo instead")));
 
 - (id<PhenixRenderer>)createRenderer;
 
@@ -26,5 +29,7 @@ typedef void (^StreamEndedCallback)(
 - (NSArray<id<PhenixMediaStreamTrack>>*)getVideoTracks;
 
 - (NSArray<id<PhenixMediaStreamTrack>>*)getTracks;
+
+- (PhenixObservable<PhenixMediaStreamEndedInfo*>*)getObservableEndedInfo;
 
 @end
