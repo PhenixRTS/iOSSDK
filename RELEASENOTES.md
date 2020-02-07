@@ -1,5 +1,17 @@
 # Release notes
 
+### 2020.0.0 ###
+#### Features/Improvements
+- Introduced stream ended observables to MediaStream and Publisher, allowing for multiple subscribers
+- The Publisher will now stop itself and forward the reason to the stream ended observables when the underlying stream ends
+- `PhenixPCastExpress publish` will now accept publish options with both a user media stream and constraints specified
+- Support BlueTooth A2DP profile and AirPlay devices for rendering audio
+
+#### Fixes
+- Fixed crash when calling `getUserMedia()` with both audio and video disabled
+- The SDK will more reliably reconnect when a network connection is reestablished
+
+
 ### 2019.2.3 ###
 #### Features/Improvements
 - Support for edge authentication tokens

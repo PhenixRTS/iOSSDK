@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
+ * Copyright 2019 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
@@ -13,5 +13,7 @@ typedef NS_ENUM(NSInteger, PhenixSourceDeviceType) {
   // Synthetic source, used for testing
   PhenixSourceDeviceTypeSynthetic,
   // Uri source, used to stream from uri
-  PhenixSourceDeviceTypeUri
+  PhenixSourceDeviceTypeUri,
+  // MPEG-TS source, used to stream from socket
+  PhenixSourceDeviceTypeMpegTsSocket
 };
