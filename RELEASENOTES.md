@@ -1,5 +1,298 @@
 # Release notes
 
+### 2021.0.15-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Removed embedded private key and certificate
+
+
+### 2021.0.14-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixes `TimeShift.getObservableFailure()` response when `Renderer.Seek` time stamp is out of range and `replay` subscriber capability is set. Now a `failed` response will be produced, instead of no failure.
+
+
+### 2021.0.13-beta ###
+#### Features/Improvements
+
+- Support for new `replay` subscriber capability
+
+#### Fixes
+
+
+### 2021.0.12-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed incorrect DeviceId warning log message when publishing
+
+
+### 2021.0.11-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed occasional crash occurring when starting multiple time shifts
+
+
+### 2021.0.10-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed memory leaks occurring when stopping a room publisher
+
+
+### 2021.0.9-beta ###
+#### Features/Improvements
+
+- Increased internal timeout when connecting to PCast platform to avoid SDK initialization failures on clients with lossy network connections
+
+#### Fixes
+
+- Fixed issue where time-shifts would sometimes start playback at wrong position when starting and stoping the same instance repeatedly
+
+
+### 2021.0.8-beta ###
+#### Features/Improvements
+
+- `PhenixUserMediaStream` instances will no longer get stopped because of network disruptions or switches so they can be retained for as long as needed by an app
+
+#### Fixes
+
+- Fixed bug which could cause app to hang and crash when backgrounding without audio playback permissions and with paused time shifts.
+
+
+### 2021.0.7-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+
+### 2021.0.6-beta ###
+#### Features/Improvements
+
+- Time-shifts playing back VOD content are now auto paused when entering background without background audio playback permissions. Such time-shifts will no longer be stopped when backgrounding and can be resumed by the app if desired when coming back into foreground.
+
+#### Fixes
+
+- Fixed sporadic crashes
+- Fixed small memory leaks when publishing
+- Fixed time-shift video playback after foregrounding a backgrounded app
+
+
+### 2021.0.5-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed bug resulting in subscribers not getting audio
+
+
+### 2021.0.2-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed audio only real-time stream rendering
+- Fixed missing callback invocation for `PhenixRoomExpress.subscribeToMemberStream` if
+  member stream has ended alread
+
+
+### 2021.0.1-beta ###
+#### Features/Improvements
+
+- When no Admin API (e.g. backend) is provided, channel publisher wildcard tokens are now automatically disabled to avoid failures
+
+#### Fixes
+
+- Added missing API `PhenixPublishToChannelOptionsBuilder.withoutWildcardTokens`
+
+
+### 2021.0.0-beta ###
+#### Features/Improvements
+
+- Improved error handling when attempting to start subscribers and publishers with capabilities and edge stream tokens
+
+#### Fixes
+
+- Fixed broken time shifts for very long running streams
+
+
+### 2020.1.77-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Viewport size is now reported in pixels, which ensures that viewport size based rendition selection works properly for time-shifts
+
+
+### 2020.1.76-beta ###
+#### Features/Improvements
+
+- `PhenixTimeShiftOptions.chunkRetrievalTimeout` property allows overriding the maximum amount of time the SDK will wait to download a chunk for time-shift playback
+- `PhenixChannelExpress.joinChannel` will now return with an "unauthorized" status (subscriber callback) when the stream token that was provided when the channel was joined is either invalid or has expired. The recourse for the app is to leave the channel (`PhenixRoomService.leaveRoom()`) and then re-join the channel with an updated stream token.
+
+#### Fixes
+
+
+### 2020.1.75-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+
+### 2020.1.74-beta ###
+#### Features/Improvements
+- PhenixTimeShiftOptions via PhenixRendererOptions allows customization of rendition selection behavior
+
+#### Fixes
+- Fixed possible crash due race condition occurring when shutting down a renderer
+- Fixed resource leaks associated with time-shifts
+
+
+### 2020.1.73-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fixed possible crash due to memory corruption
+- Fixed looping time-shift freezes
+
+
+### 2020.1.71-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fixed possible crash when playing back multiple time-shifts at once
+
+
+### 2020.1.70-beta ###
+#### Features/Improvements
+- Improved TimeShift rendition switching speed (from lower to higher bandwidth rendition)
+- Improved TimeShift playback reliability
+
+#### Fixes
+
+
+### 2020.1.68-beta ###
+#### Features/Improvements
+- Shortened duration for TimeShift to become ready
+- Improved TimeShift playback reliability
+
+#### Fixes
+
+
+### 2020.1.67-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fixes potential deadlock when calling `PhenixTimeShift.seek`
+
+
+### 2020.1.64-beta ###
+#### Features/Improvements
+- Improves reliability of time shifts when seeking
+- Improves time needed to become ready for time shifts
+
+#### Fixes
+
+
+### 2020.1.63-beta ###
+#### Features/Improvements
+- Observable session id on PhenixPCastExpress
+- Support for stereo audio output
+- Enabling time shift on subscribers now requires new `time-shift` capability
+
+#### Fixes
+- Fix for PhenixTimeShift creation failures
+
+
+### 2020.1.61-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fix for occasional failures when creating RoomChatService. Extra delay before creating service is no longer needed.
+- Fix for failing TimeShift objects after calling Renderer.Seek for Live streams
+
+
+### 2020.1.60-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fix for further potential deadlocks that may occur when calling Renderer.Seek
+
+
+### 2020.1.59-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fix for short DVR segments not looping
+- Fix for deadlock when calling Renderer.Seek
+
+
+### 2020.1.58-beta ###
+#### Features/Improvements
+- Improved VOD stream startup and seeking times and stability
+- Improved performance by avoiding pixel format conversions where possible
+
+#### Fixes
+
+
+### 2020.1.57-beta ###
+#### Features/Improvements
+- VOD asset playback support via TimeShift
+
+#### Fixes
+
+
+### 2020.1.56-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Member.CommitChanges callback is guaranteed to be called, with a timeout status if need be
+
+
+### 2020.1.54-beta ###
+#### Features/Improvements
+- Adds support for MIME types to chat messages
+
+#### Fixes
+
+
+### 2020.1.52-beta ###
+#### Features/Improvements
+- Android: Support for configurable sampling rate for BlueTooth SCO capability
+
+#### Fixes
+- Fix for inconsistent self member updates
+
+
+### 2020.1.50-beta ###
+#### Features/Improvements
+- Timeshift API
+- Viewport based HLS layer selection for timeshifts
+- Timeshift prefetch window is updated based on layer bitrate for faster switching from very low bitrate layers
+- Support for "click and seek" into a timeshift segment
+- Timeshift observable playback head reports position in UTC time
+- Timeshift pause and play options
+- Timeshift observable failure report
+- LimitBanwdith API for TimeShift
+- Added observable in RoomChatService that fires individually for each chat message as they come in
+- Automatic stream restart on change in network type
+- Android: Camera auto reconnection logic
+- Android: Add support for Automatic Gain Control
+
+#### Fixes
+- Fix for deadlock when timeshift layer resolution changes
+- Audio muted status needs to be honored when rendering time-shifted content
+- iOS: Fixes image corruption during time shifted playback
+
+
 ### 2020.0.0 ###
 #### Features/Improvements
 - Introduced stream ended observables to MediaStream and Publisher, allowing for multiple subscribers

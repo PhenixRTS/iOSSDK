@@ -35,6 +35,11 @@
 
 - (id<PhenixPublishOptionsBuilder>)withStreamToken:(NSString*)streamToken;
 
+/**
+ Will not attempt to retry a stream if it failed due to unauthorized status
+ */
+- (id<PhenixPublishOptionsBuilder>)withSkipRetryOnUnauthorized;
+
 - (id<PhenixPublishOptions>)buildPublishOptions;
 // clang-format on
 
