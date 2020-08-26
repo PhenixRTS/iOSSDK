@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
+ * Copyright 2020 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
@@ -29,6 +29,8 @@
 - (id<PhenixPublishToChannelOptionsBuilder>)withPublishOptions:(id<PhenixPublishOptions>)publishOptions;
 
 - (id<PhenixPublishToChannelOptionsBuilder>)withPublishRemoteOptions:(id<PhenixPublishRemoteOptions>)publishRemoteOptions;
+
+- (id<PhenixPublishToChannelOptionsBuilder>)withMemberRoleUpdateDeferralUntilFirstDataPublished;
 
 - (id<PhenixPublishToChannelOptions>)buildPublishToChannelOptions;
 // clang-format on

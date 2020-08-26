@@ -1,5 +1,27 @@
 # Release notes
 
+### 2020.1.50-beta ###
+#### Features/Improvements
+- Timeshift API
+- Viewport based HLS layer selection for timeshifts
+- Timeshift prefetch window is updated based on layer bitrate for faster switching from very low bitrate layers
+- Support for "click and seek" into a timeshift segment
+- Timeshift observable playback head reports position in UTC time
+- Timeshift pause and play options
+- Timeshift observable failure report
+- LimitBanwdith API for TimeShift
+- Added observable in RoomChatService that fires individually for each chat message as they come in
+- Automatic stream restart on change in network type
+- Android: Camera auto reconnection logic
+- Android: Add support for Automatic Gain Control
+
+#### Fixes
+- Fix for inconsistent self member updates
+- Fix for deadlock when timeshift layer resolution changes
+- Audio muted status needs to be honored when rendering time-shifted content
+- iOS: Fixes image corruption during time shifted playback
+
+
 ### 2020.0.0 ###
 #### Features/Improvements
 - Introduced stream ended observables to MediaStream and Publisher, allowing for multiple subscribers

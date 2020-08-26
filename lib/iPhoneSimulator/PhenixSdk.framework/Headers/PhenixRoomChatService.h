@@ -15,6 +15,8 @@ typedef void (^SendMessageCallback)(PhenixRequestStatus status, NSString* messag
 
 - (PhenixObservable<NSNumber*>*)getObservableChatEnabled;
 
+- (PhenixObservable<id<PhenixChatMessage>>*)getObservableLastChatMessage;
+
 - (PhenixObservable<NSArray<id<PhenixChatMessage>>*>*)getObservableChatMessages;
 
 - (void)sendMessageToRoom:(NSString*)message;

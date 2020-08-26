@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
+ * Copyright 2020 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <AVFoundation/AVFoundation.h>
 #import <CoreVideo/CoreVideo.h>
@@ -15,6 +15,7 @@
 #import "PhenixObservable.h"
 #import "PhenixRendererStartStatus.h"
 #import "PhenixRendererStatistics.h"
+#import "PhenixTimeShift.h"
 
 @protocol PhenixRenderer<NSObject>
 
@@ -54,6 +55,8 @@ typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> fram
 - (PhenixObservable<PhenixDuration*>*)getObservablePlayoutDelay;
 
 - (id<PhenixDisposable>)overridePlayoutDelay:(NSTimeInterval)desiredPlayoutDelay;
+
+- (id<PhenixTimeShift>)seek:(NSDate*)timeInUtc;
 // clang-format on
 
 @property(readonly, nonatomic, getter=isAudioMuted) BOOL audioMuted;
@@ -61,5 +64,7 @@ typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> fram
 @property(readonly, nonatomic) struct PhenixDimensions videoDisplayDimensions;
 
 @property(readonly, nonatomic) struct PhenixRendererStatistics stats;
+
+@property(readonly, nonatomic, getter=isSeekable) BOOL seekable;
 
 @end
