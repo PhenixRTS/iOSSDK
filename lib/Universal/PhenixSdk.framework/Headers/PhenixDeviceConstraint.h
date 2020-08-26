@@ -1,8 +1,9 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
+ * Copyright 2020 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
+#import "PhenixAudioChannelLayout.h"
 #import "PhenixAudioEchoCancelationMode.h"
 #import "PhenixAutoFocusMode.h"
 #import "PhenixFacingMode.h"
@@ -52,6 +53,9 @@ __attribute__((visibility("default"))) @interface PhenixDeviceConstraint : NSObj
 + (PhenixDeviceConstraint*)initWithAutoFocusMode:(PhenixAutoFocusMode)value
                                                 :(PhenixConstraintType)type;
 + (PhenixDeviceConstraint*)initWithAutoFocusMode:(PhenixAutoFocusMode)value;
++ (PhenixDeviceConstraint*)initWithAudioChannelLayout:(PhenixAudioChannelLayout)value
+                                                     :(PhenixConstraintType)type;
++ (PhenixDeviceConstraint*)initWithAudioChannelLayout:(PhenixAudioChannelLayout)value;
 // clang-format on
 
 - (void)updateDouble:(double)value;
@@ -63,6 +67,7 @@ __attribute__((visibility("default"))) @interface PhenixDeviceConstraint : NSObj
 - (void)updateAudioEchoCancelationMode:(PhenixAudioEchoCancelationMode)value;
 - (void)updateVideoSourceRotationMode:(PhenixVideoSourceRotationMode)value;
 - (void)updateAutoFocusMode:(PhenixAutoFocusMode)value;
+- (void)updateAudioChannelLayout:(PhenixAudioChannelLayout)value;
 
 @property(readonly, nonatomic) PhenixConstraintType type;
 @property(readonly, nonatomic) NSString* valueAsString;

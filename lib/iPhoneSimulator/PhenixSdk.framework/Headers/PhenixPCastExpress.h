@@ -44,6 +44,8 @@ typedef void (^PhenixPCastExpressWaitForOnlineCallback)();
 - (void)waitForOnline:(PhenixPCastExpressWaitForOnlineCallback)callback;
 
 - (PhenixObservable<NSNumber*>*)getObservableIsOnlineStatus;
+
+- (PhenixObservable<NSString*>*)getObservableSessionId;
 // clang-format on
 
 @property(readonly, nonatomic) id<PhenixPCast> pcast;
