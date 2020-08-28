@@ -1,5 +1,13 @@
 # Release notes
 
+### 2020.1.52-beta ###
+#### Features/Improvements
+- Android: Support for configurable sampling rate for BlueTooth SCO capability
+
+#### Fixes
+- Fix for inconsistent self member updates
+
+
 ### 2020.1.50-beta ###
 #### Features/Improvements
 - Timeshift API
@@ -16,7 +24,6 @@
 - Android: Add support for Automatic Gain Control
 
 #### Fixes
-- Fix for inconsistent self member updates
 - Fix for deadlock when timeshift layer resolution changes
 - Audio muted status needs to be honored when rendering time-shifted content
 - iOS: Fixes image corruption during time shifted playback
