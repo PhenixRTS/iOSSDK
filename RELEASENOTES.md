@@ -1,5 +1,12 @@
 # Release notes
 
+### 2020.1.54-beta ###
+#### Features/Improvements
+- Adds support for MIME types to chat messages
+
+#### Fixes
+
+
 ### 2020.1.52-beta ###
 #### Features/Improvements
 - Android: Support for configurable sampling rate for BlueTooth SCO capability
