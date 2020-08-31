@@ -1,5 +1,12 @@
 # Release notes
 
+### 2020.1.56-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Member.CommitChanges callback is guaranteed to be called, with a timeout status if need be
+
+
 ### 2020.1.54-beta ###
 #### Features/Improvements
 - Adds support for MIME types to chat messages
