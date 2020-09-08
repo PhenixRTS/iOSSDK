@@ -15,6 +15,7 @@
 #import "PhenixObservable.h"
 #import "PhenixRendererStartStatus.h"
 #import "PhenixRendererStatistics.h"
+#import "PhenixSeekOrigin.h"
 #import "PhenixTimeShift.h"
 
 @protocol PhenixRenderer<NSObject>
@@ -44,6 +45,10 @@ typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> fram
 
 - (PhenixRendererStartStatus)start:(CALayer*)renderLayer;
 
+- (PhenixRendererStartStatus)startSuspended;
+
+- (PhenixRendererStartStatus)startSuspended:(CALayer*)renderLayer;
+
 - (void)stop;
 
 - (void)muteAudio;
@@ -57,6 +62,9 @@ typedef void (^FrameReadyForProcessingCallback)(id<PhenixFrameNotification> fram
 - (id<PhenixDisposable>)overridePlayoutDelay:(NSTimeInterval)desiredPlayoutDelay;
 
 - (id<PhenixTimeShift>)seek:(NSDate*)timeInUtc;
+
+- (id<PhenixTimeShift>)seek:(NSTimeInterval)offset
+                           :(PhenixSeekOrigin)origin;
 // clang-format on
 
 @property(readonly, nonatomic, getter=isAudioMuted) BOOL audioMuted;

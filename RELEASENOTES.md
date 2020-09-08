@@ -1,5 +1,12 @@
 # Release notes
 
+### 2020.1.57-beta ###
+#### Features/Improvements
+- VOD asset playback support via TimeShift
+
+#### Fixes
+
+
 ### 2020.1.56-beta ###
 #### Features/Improvements
 

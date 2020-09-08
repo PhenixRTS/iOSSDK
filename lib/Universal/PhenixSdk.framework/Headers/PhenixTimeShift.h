@@ -6,6 +6,7 @@
 #import "PhenixDisposable.h"
 #import "PhenixObservable.h"
 #import "PhenixRequestStatusObject.h"
+#import "PhenixSeekOrigin.h"
 
 @protocol PhenixTimeShift<NSObject>
 
@@ -18,9 +19,10 @@
 
 - (void)play;
 
-- (PhenixObservable<PhenixRequestStatusObject*>*)seekRelative:(NSTimeInterval)relativeFromCurrentHead;
+- (PhenixObservable<PhenixRequestStatusObject*>*)seek:(NSTimeInterval)offset
+                                                     :(PhenixSeekOrigin)origin;
 
-- (PhenixObservable<PhenixRequestStatusObject*>*)seekAbsolute:(NSDate*)absoluteTimeInUtc;
+- (PhenixObservable<PhenixRequestStatusObject*>*)seek:(NSDate*)absoluteTimeInUtc;
 
 - (PhenixObservable<NSNumber*>*)getObservableReadyForPlaybackStatus;
 
@@ -28,7 +30,11 @@
 
 - (PhenixObservable<NSDate*>*)getObservablePlaybackHead;
 
+- (PhenixObservable<NSNumber*>*)getObservableEnded;
+
 - (id<PhenixDisposable>)limitBandwidth:(UInt64)bandwidthLimitInBps;
 // clang-format on
+
+@property(readonly, nonatomic, getter=getStartTime) NSDate* startTime;
 
 @end
