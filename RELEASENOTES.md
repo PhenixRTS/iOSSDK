@@ -1,5 +1,13 @@
 # Release notes
 
+### 2020.1.59-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fix for shorti DVR segments not looping
+- Fix for deadlock when calling Renderer.Seek
+
+
 ### 2020.1.58-beta ###
 #### Features/Improvements
 - Improved VOD stream startup and seeking times and stability
