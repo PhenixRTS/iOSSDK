@@ -1,10 +1,17 @@
 # Release notes
 
+### 2020.1.60-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fix for further potential deadlocks that may occur when calling Renderer.Seek
+
+
 ### 2020.1.59-beta ###
 #### Features/Improvements
 
 #### Fixes
-- Fix for shorti DVR segments not looping
+- Fix for short DVR segments not looping
 - Fix for deadlock when calling Renderer.Seek
 
 
