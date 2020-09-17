@@ -1,5 +1,13 @@
 # Release notes
 
+### 2020.1.61-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fix for occasional failures when creating RoomChatService. Extra delay before creating service is no longer needed.
+- Fix for failing TimeShift objects after calling Renderer.Seek for Live streams
+
+
 ### 2020.1.60-beta ###
 #### Features/Improvements
 
