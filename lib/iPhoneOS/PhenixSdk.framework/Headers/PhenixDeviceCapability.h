@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 PhenixP2P Inc. Confidential and Proprietary. All Rights Reserved.
+ * Copyright 2020 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
@@ -14,5 +14,6 @@ typedef NS_ENUM(NSInteger, PhenixDeviceCapability) {
   PhenixDeviceCapabilityPolarPattern,
   PhenixDeviceCapabilityAudioEchoCancelationMode,
   PhenixDeviceCapabilityVideoSourceRotationMode,
-  PhenixDeviceCapabilityAutoFocusMode
+  PhenixDeviceCapabilityAutoFocusMode,
+  PhenixDeviceCapabilityAudioChannelLayout
 };

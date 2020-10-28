@@ -1,5 +1,14 @@
 # Release notes
 
+### 2020.1.63-beta ###
+#### Features/Improvements
+- Observable session id on PhenixPCastExpress
+- Support for stereo audio output
+
+#### Fixes
+- Fix for PhenixTimeShift creation failures
+
+
 ### 2020.1.61-beta ###
 #### Features/Improvements
 
