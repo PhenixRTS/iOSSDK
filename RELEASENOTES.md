@@ -2,8 +2,17 @@
 
 ### 2020.1.63-beta ###
 #### Features/Improvements
+- Improves reliability of time shifts when seeking
+- Improves time needed to become ready for time shifts
+
+#### Fixes
+
+
+### 2020.1.63-beta ###
+#### Features/Improvements
 - Observable session id on PhenixPCastExpress
 - Support for stereo audio output
+- Enabling time shift on subscribers now requires new `time-shift` capability
 
 #### Fixes
 - Fix for PhenixTimeShift creation failures
