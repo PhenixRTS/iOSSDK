@@ -1,6 +1,13 @@
 # Release notes
 
-### 2020.1.63-beta ###
+### 2020.1.67-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fixes potential deadlock when calling `PhenixTimeShift.seek`
+
+
+### 2020.1.64-beta ###
 #### Features/Improvements
 - Improves reliability of time shifts when seeking
 - Improves time needed to become ready for time shifts
