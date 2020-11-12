@@ -1,5 +1,13 @@
 # Release notes
 
+### 2020.1.68-beta ###
+#### Features/Improvements
+- Shortened duration for TimeShift to become ready
+- Improved TimeShift playback reliability
+
+#### Fixes
+
+
 ### 2020.1.67-beta ###
 #### Features/Improvements
 
