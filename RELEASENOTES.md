@@ -1,5 +1,12 @@
 # Release notes
 
+### 2020.1.71-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fixed possible crash when playing back multiple time-shifts at once
+
+
 ### 2020.1.70-beta ###
 #### Features/Improvements
 - Improved TimeShift rendition switching speed (from lower to higher bandwidth rendition)
