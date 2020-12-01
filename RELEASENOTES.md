@@ -1,5 +1,13 @@
 # Release notes
 
+### 2020.1.73-beta ###
+#### Features/Improvements
+
+#### Fixes
+- Fixed possible crash due to memory corruption
+- Fixed looping time-shift freezes
+
+
 ### 2020.1.71-beta ###
 #### Features/Improvements
 
