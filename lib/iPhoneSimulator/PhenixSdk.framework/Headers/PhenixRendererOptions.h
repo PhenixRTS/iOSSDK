@@ -4,6 +4,7 @@
 #import <Foundation/Foundation.h>
 
 #import "PhenixAspectRatioMode.h"
+#import "PhenixTimeShiftOptions.h"
 #import "PhenixVideoRenderDeviceType.h"
 
 // clang-format off
@@ -19,6 +20,8 @@ __attribute__((visibility("default"))) @interface PhenixRendererOptions : NSObje
 @property(nonatomic) BOOL useNullAudioDevice;
 
 @property(nonatomic) PhenixVideoRenderDeviceType preferredVideoRenderDeviceType;
+
+@property(nonatomic, nonnull, retain) PhenixTimeShiftOptions* timeShiftOptions;
 
 @end
 // clang-format on

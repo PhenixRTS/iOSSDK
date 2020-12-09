@@ -1,5 +1,14 @@
 # Release notes
 
+### 2020.1.74-beta ###
+#### Features/Improvements
+- PhenixTimeShiftOptions via PhenixRendererOptions allows customization of rendition selection behavior
+
+#### Fixes
+- Fixed possible crash due race condition occurring when shutting down a renderer
+- Fixed resource leaks associated with time-shifts
+
+
 ### 2020.1.73-beta ###
 #### Features/Improvements
 
