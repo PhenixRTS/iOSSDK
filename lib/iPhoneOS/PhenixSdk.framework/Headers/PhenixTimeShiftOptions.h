@@ -11,5 +11,7 @@ __attribute__((visibility("default"))) @interface PhenixTimeShiftOptions : NSObj
 
 @property(nonatomic) BOOL lowerBandwidthWhileSeekingEnabled;
 
+@property(nonatomic) NSTimeInterval chunkRetrievalTimeout;
+
 @end
 // clang-format on

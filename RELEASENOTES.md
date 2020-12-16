@@ -1,5 +1,14 @@
 # Release notes
 
+### 2020.1.76-beta ###
+#### Features/Improvements
+
+- `PhenixTimeShiftOptions.chunkRetrievalTimeout` property allows overriding the maximum amount of time the SDK will wait to download a chunk for time-shift playback
+- `PhenixChannelExpress.joinChannel` will now return with an "unauthorized" status (subscriber callback) when the stream token that was provided when the channel was joined is either invalid or has expired. The recourse for the app is to leave the channel (`PhenixRoomService.leaveRoom()`) and then re-join the channel with an updated stream token.
+
+#### Fixes
+
+
 ### 2020.1.75-beta ###
 #### Features/Improvements
 
