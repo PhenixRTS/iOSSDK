@@ -1,5 +1,13 @@
 # Release notes
 
+### 2020.1.77-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Viewport size is now reported in pixels, which ensures that viewport size based rendition selection works properly for time-shifts
+
+
 ### 2020.1.76-beta ###
 #### Features/Improvements
 
