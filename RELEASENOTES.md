@@ -1,5 +1,15 @@
 # Release notes
 
+### 2021.0.0-beta ###
+#### Features/Improvements
+
+- Improved error handling when attempting to start subscribers and publishers with capabilities and edge stream tokens
+
+#### Fixes
+
+- Fixed broken time shifts for very long running streams
+
+
 ### 2020.1.77-beta ###
 #### Features/Improvements
 
