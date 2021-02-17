@@ -1,5 +1,15 @@
 # Release notes
 
+### 2021.0.1-beta ###
+#### Features/Improvements
+
+- When no Admin API (e.g. backend) is provided, channel publisher wildcard tokens are now automatically disabled to avoid failures
+
+#### Fixes
+
+- Added missing API `PhenixPublishToChannelOptionsBuilder.withoutWildcardTokens`
+
+
 ### 2021.0.0-beta ###
 #### Features/Improvements
 

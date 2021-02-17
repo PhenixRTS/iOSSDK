@@ -32,6 +32,8 @@
 
 - (id<PhenixPublishToChannelOptionsBuilder>)withMemberRoleUpdateDeferralUntilFirstDataPublished;
 
+- (id<PhenixPublishToChannelOptionsBuilder>)withoutWildcardTokens;
+
 - (id<PhenixPublishToChannelOptions>)buildPublishToChannelOptions;
 // clang-format on
 
