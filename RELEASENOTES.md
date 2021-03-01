@@ -1,5 +1,15 @@
 # Release notes
 
+### 2021.0.2-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed audio only real-time stream rendering
+- Fixed missing callback invocation for `PhenixRoomExpress.subscribeToMemberStream` if
+  member stream has ended alread
+
+
 ### 2021.0.1-beta ###
 #### Features/Improvements
 
