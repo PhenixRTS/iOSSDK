@@ -1,5 +1,13 @@
 # Release notes
 
+### 2021.0.5-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed bug resulting in subscribers not getting audio
+
+
 ### 2021.0.2-beta ###
 #### Features/Improvements
 
