@@ -1,5 +1,17 @@
 # Release notes
 
+### 2021.0.6-beta ###
+#### Features/Improvements
+
+- Time-shifts playing back VOD content are now auto paused when entering background without background audio playback permissions. Such time-shifts will no longer be stopped when backgrounding and can be resumed by the app if desired when coming back into foreground.
+
+#### Fixes
+
+- Fixed sporadic crashes
+- Fixed small memory leaks when publishing
+- Fixed time-shift video playback after foregrounding a backgrounded app
+
+
 ### 2021.0.5-beta ###
 #### Features/Improvements
 
