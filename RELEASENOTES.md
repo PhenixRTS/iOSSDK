@@ -1,5 +1,11 @@
 # Release notes
 
+### 2021.0.7-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+
 ### 2021.0.6-beta ###
 #### Features/Improvements
 
