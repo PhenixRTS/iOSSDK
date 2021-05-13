@@ -1,5 +1,13 @@
 # Release notes
 
+### 2021.0.8-beta ###
+#### Features/Improvements
+
+- `PhenixUserMediaStream` instances will no longer get stopped because of network disruptions or switches so they can be retained for as long as needed by an app
+
+#### Fixes
+
+
 ### 2021.0.7-beta ###
 #### Features/Improvements
 
