@@ -1,11 +1,23 @@
 # Release notes
 
+### 2021.0.9-beta ###
+#### Features/Improvements
+
+- Increased internal timeout when connecting to PCast platform to avoid SDK initialization failures on clients with lossy network connections
+
+#### Fixes
+
+- Fixed issue where time-shifts would sometimes start playback at wrong position when starting and stoping the same instance repeatedly
+
+
 ### 2021.0.8-beta ###
 #### Features/Improvements
 
 - `PhenixUserMediaStream` instances will no longer get stopped because of network disruptions or switches so they can be retained for as long as needed by an app
 
 #### Fixes
+
+- Fixed bug which could cause app to hang and crash when backgrounding without audio playback permissions and with paused time shifts.
 
 
 ### 2021.0.7-beta ###
