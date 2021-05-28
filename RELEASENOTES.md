@@ -1,5 +1,13 @@
 # Release notes
 
+### 2021.0.10-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed memory leaks occurring when stopping a room publisher
+
+
 ### 2021.0.9-beta ###
 #### Features/Improvements
 
