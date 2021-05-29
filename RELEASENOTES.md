@@ -1,5 +1,13 @@
 # Release notes
 
+### 2021.0.11-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed occasional crash occurring when starting multiple time shifts
+
+
 ### 2021.0.10-beta ###
 #### Features/Improvements
 
