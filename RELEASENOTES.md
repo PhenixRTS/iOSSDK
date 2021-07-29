@@ -1,5 +1,13 @@
 # Release notes
 
+### 2021.0.12-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixed incorrect DeviceId warning log message when publishing
+
+
 ### 2021.0.11-beta ###
 #### Features/Improvements
 
