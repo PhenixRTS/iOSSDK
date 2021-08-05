@@ -1,5 +1,13 @@
 # Release notes
 
+### 2021.0.13-beta ###
+#### Features/Improvements
+
+- Support for new `replay` subscriber capability
+
+#### Fixes
+
+
 ### 2021.0.12-beta ###
 #### Features/Improvements
 
