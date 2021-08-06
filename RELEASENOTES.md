@@ -1,5 +1,13 @@
 # Release notes
 
+### 2021.0.14-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Fixes `TimeShift.getObservableFailure()` response when `Renderer.Seek` time stamp is out of range and `replay` subscriber capability is set. Now a `failed` response will be produced, instead of no failure.
+
+
 ### 2021.0.13-beta ###
 #### Features/Improvements
 
