@@ -1,5 +1,13 @@
 # Release notes
 
+### 2021.0.15-beta ###
+#### Features/Improvements
+
+#### Fixes
+
+- Removed embedded private key and certificate
+
+
 ### 2021.0.14-beta ###
 #### Features/Improvements
 
