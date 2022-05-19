@@ -1,5 +1,10 @@
 # Release notes
 
+### 2022.0.2-beta ###
+#### Features/Improvements
+
+#### Fixes
+
 ### 2021.0.15-beta ###
 #### Features/Improvements
 

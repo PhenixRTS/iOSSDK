@@ -16,7 +16,7 @@ target 'your app name'
 
 ### As independent Framework
 The Phenix SDK framework is structured as follows:
-* `<SDK root>/lib/iPhoneOS/PhenixSdk.framework`: This contains the following architectures for physical devices: **arm64, armv7, and armv7s**
+* `<SDK root>/lib/iPhoneOS/PhenixSdk.framework`: This contains the following architectures for physical devices: **arm64**
 * `<SDK root>/lib/iPhoneSimulator/PhenixSdk.framework`: This contains the following simulator architecture: x64
 * `<SDK root>/lib/Universal/PhenixSdk.framework`: This contains all architectures for simulator and physical devices
 

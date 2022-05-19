@@ -1,16 +1,16 @@
 Pod::Spec.new do |spec|
 
-  spec.version      = "2021.0.15-beta"
+  spec.version      = "2022.0.1-beta.3"
 
   spec.name         = "PhenixSdk"
   spec.homepage     = "https://phenixrts.com/"
   spec.summary      = "Video Real Time Solutions"
   spec.license      = { :type => "Proprietary", :text => <<-LICENSE
-                          Copyright 2021 Phenix Real Time Solutions, Inc.
+                          Copyright 2022 Phenix Real Time Solutions, Inc.
                           Confidential and Proprietary. All rights reserved.
 
                           By using this code you agree to the Phenix Terms of Service found online here:
-                          http://phenixrts.com/terms-of-service.html
+                          https://phenixrts.com/en-us/terms-of-service.html
                         LICENSE
                       }
   spec.author       = "Phenix Real Time Solutions, Inc."
