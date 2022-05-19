@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  spec.version      = "2022.0.1-beta.3"
+  spec.version      = "2022.0.1-beta.2"
 
   spec.name         = "PhenixSdk"
   spec.homepage     = "https://phenixrts.com/"
