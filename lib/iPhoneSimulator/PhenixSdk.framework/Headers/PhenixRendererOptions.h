@@ -1,9 +1,10 @@
 /**
- * Copyright 2020 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
+ * Copyright 2021 Phenix Real Time Solutions, Inc. Confidential and Proprietary. All Rights Reserved.
  */
 #import <Foundation/Foundation.h>
 
 #import "PhenixAspectRatioMode.h"
+#import "PhenixHardwareAcceleratedDecodingMode.h"
 #import "PhenixTimeShiftOptions.h"
 #import "PhenixVideoRenderDeviceType.h"
 
@@ -20,6 +21,8 @@ __attribute__((visibility("default"))) @interface PhenixRendererOptions : NSObje
 @property(nonatomic) BOOL useNullAudioDevice;
 
 @property(nonatomic) PhenixVideoRenderDeviceType preferredVideoRenderDeviceType;
+
+@property(nonatomic) PhenixHardwareAcceleratedDecodingMode hardwareAcceleratedDecodingMode;
 
 @property(nonatomic, nonnull, retain) PhenixTimeShiftOptions* timeShiftOptions;
 
