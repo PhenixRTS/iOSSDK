@@ -1,5 +1,11 @@
 # Release notes
 
+### 2022.0.2 ###
+#### Features/Improvements
+
+#### Fixes
+
+
 ### 2022.0.1 ###
 #### Features/Improvements
 
