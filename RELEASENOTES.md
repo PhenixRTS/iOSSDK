@@ -1,5 +1,11 @@
 # Release notes
 
+### 2022.0.4-beta.1 ###
+#### Features/Improvements
+
+- The iOS SDK is now distributed in an XCFramework format
+- Support for ARM64 iOS Simulator added
+
 ### 2022.0.3-beta.1 ###
 #### Features/Improvements
 
